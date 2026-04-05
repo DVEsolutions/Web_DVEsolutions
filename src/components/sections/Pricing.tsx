@@ -20,13 +20,13 @@ function PricingGlassCard({ children, highlighted = false }: { children: React.R
     <div
       ref={ref}
       onMouseMove={handleMouseMove}
-      className={`group relative overflow-hidden rounded-[32px] p-8 md:p-10 flex flex-col transition-transform duration-500 hover:-translate-y-2 ${highlighted ? 'border border-accent/40 bg-black/60 shadow-[0_12px_50px_rgba(16,185,129,0.1)]' : 'border border-white/5 bg-black/40 shadow-[0_12px_50px_rgba(0,0,0,0.8)]'}`}
+      className={`group relative overflow-hidden rounded-[32px] p-8 md:p-10 flex flex-col transition-transform duration-500 hover:-translate-y-2 ${highlighted ? 'border border-accent/40 bg-surface shadow-[0_12px_50px_rgba(255,90,31,0.1)]' : 'border border-white/5 bg-surface shadow-[0_12px_50px_rgba(0,0,0,0.8)]'}`}
       style={{ backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)' }}
     >
       {/* Background static glow for highlighted card */}
       {highlighted && (
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-30" style={{
-          background: 'radial-gradient(ellipse 120% 80% at 50% 110%, rgba(16,185,129,0.2) 0%, transparent 60%)'
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-20" style={{
+          background: 'radial-gradient(ellipse 120% 80% at 50% 110%, rgba(255,90,31,0.15) 0%, transparent 60%)'
         }} />
       )}
       
@@ -34,7 +34,7 @@ function PricingGlassCard({ children, highlighted = false }: { children: React.R
       <div 
         className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none mix-blend-screen"
         style={{
-          background: `radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${highlighted ? 'rgba(16,185,129,0.25)' : 'rgba(6,182,212,0.12)'}, transparent 40%)`
+          background: `radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,90,31,0.1), transparent 40%)`
         }}
       />
       
@@ -61,7 +61,7 @@ export default function Pricing() {
     <section className="relative py-32 px-6 bg-background overflow-hidden border-t border-white/5">
       {/* Background ambient lighting */}
       <div className="absolute top-0 inset-x-0 h-[500px] pointer-events-none mix-blend-screen opacity-50"
-        style={{ background: 'radial-gradient(ellipse 70% 50% at 50% -20%, rgba(6,182,212,0.07) 0%, transparent 80%)' }} />
+        style={{ background: 'radial-gradient(ellipse 70% 50% at 50% -20%, rgba(255,90,31,0.05) 0%, transparent 80%)' }} />
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <motion.div
@@ -72,7 +72,7 @@ export default function Pricing() {
           className="flex flex-col items-center text-center mb-16"
         >
           <div className="flex items-center gap-2 text-[11px] font-bold text-ink-500 mb-6 uppercase tracking-widest" style={{ fontFamily: 'var(--font-mono)' }}>
-            <span className="text-accent-cyan/80">{`//`}</span>
+            <span className="text-accent">{`//`}</span>
             <span>04 / 06 · THE ACCESS</span>
           </div>
 
@@ -104,7 +104,7 @@ export default function Pricing() {
               <ul className="flex flex-col gap-4 mb-10 flex-1">
                 {plan1.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-base text-ink-500 font-medium">
-                    <span className="text-accent-cyan mt-1 text-xs font-bold">✓</span>{f}
+                    <span className="text-accent mt-1 text-xs font-bold">✓</span>{f}
                   </li>
                 ))}
               </ul>
@@ -127,7 +127,7 @@ export default function Pricing() {
           >
             <PricingGlassCard highlighted>
               <div className="absolute top-6 right-6 lg:-right-4 lg:-top-4 z-20">
-                <span className="inline-flex items-center px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest bg-accent text-white shadow-[0_0_20px_rgba(16,185,129,0.4)] ring-1 ring-accent-dark"
+                <span className="inline-flex items-center px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest bg-accent text-white shadow-[0_0_20px_rgba(255,90,31,0.4)] ring-1 ring-accent-dark"
                   style={{ fontFamily: 'var(--font-mono)' }}>
                   {t('plan2_badge')}
                 </span>
@@ -152,7 +152,7 @@ export default function Pricing() {
               <a href="#cta" 
                  onMouseEnter={playHover} onClick={playClick}
                  className="group relative w-full inline-flex items-center justify-center px-6 py-4 rounded-xl text-white font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.98] mt-auto overflow-hidden">
-                <div className="absolute inset-0 bg-accent transition-colors duration-500 group-hover:bg-accent-cyan z-0" />
+                <div className="absolute inset-0 bg-accent transition-colors duration-500 group-hover:bg-accent-dark z-0" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.3)_0%,transparent_100%)] blur-md transition-opacity duration-500 z-0" />
                 <span className="relative z-10 mix-blend-plus-lighter">{t('plan2_cta')}</span>
               </a>
