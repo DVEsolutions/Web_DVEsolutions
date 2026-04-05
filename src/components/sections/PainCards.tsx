@@ -140,11 +140,14 @@ export default function PainCards() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {cards.map((card, i) => {
             const Icon = cardIcons[i];
             const video = videoSources[i];
             
+            // Bento logic: Card 1 spans 2 cols, Card 2 spans 2, Card 3 spans 4 (bottom)
+            const gridSpan = i === 2 ? 'md:col-span-4' : 'md:col-span-2';
+
             return (
               <motion.div
                 key={i}
@@ -152,11 +155,11 @@ export default function PainCards() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, delay: i * 0.15, ease: "easeOut" }}
-                className="h-full"
+                className={gridSpan}
               >
                 <TiltCard bgVideo={video}>
                   <div
-                    className="absolute top-4 right-5 text-[72px] font-bold leading-none select-none pointer-events-none opacity-[0.04] transition-opacity duration-300"
+                    className="absolute top-4 right-5 text-[72px] font-bold leading-none select-none pointer-events-none opacity-[0.03] transition-opacity duration-300"
                     style={{ fontFamily: 'var(--font-sora)', color: '#fff' }}
                   >
                     ❝
@@ -164,12 +167,12 @@ export default function PainCards() {
 
                   <div className="flex items-center justify-between mb-8">
                     <span
-                      className="inline-flex items-center px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-widest text-white/50 bg-white/5 border border-white/5"
+                      className="inline-flex items-center px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-widest text-white/30 bg-white/5 border border-white/5"
                       style={{ fontFamily: 'var(--font-mono)' }}
                     >
                       {card.badge}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-accent-dark/20 flex items-center justify-center text-accent/90 flex-shrink-0 shadow-[inset_0_0_12px_rgba(16,185,129,0.2)]">
+                    <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent/80 flex-shrink-0 border border-accent/20">
                       <Icon />
                     </div>
                   </div>
@@ -181,7 +184,7 @@ export default function PainCards() {
                     &quot;{card.hook}&quot;
                   </h3>
 
-                  <p className="text-sm text-ink-500 leading-relaxed font-medium mt-auto">
+                  <p className="text-sm text-ink-500 leading-relaxed font-medium mt-auto max-w-lg">
                     {card.body}
                   </p>
                 </TiltCard>
