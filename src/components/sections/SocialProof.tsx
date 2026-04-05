@@ -39,9 +39,9 @@ function TechPill({ item }: { item: { label: string, icon: string, iconHex?: str
     : `https://cdn.simpleicons.org/${item.icon}/white`;
 
   return (
-    <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-bold text-white/70 whitespace-nowrap mx-2 transition-transform hover:scale-105 hover:text-white hover:bg-white/10"
-      style={{ fontFamily: 'var(--font-mono)', border: '1px solid rgba(255,255,255,0.05)', background: 'rgba(255,255,255,0.03)' }}>
-      <img src={iconUrl} alt={item.label} className="w-4 h-4 object-contain opacity-80" />
+    <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-[10px] font-bold text-white/40 whitespace-nowrap mx-2 transition-all hover:scale-105 hover:text-white hover:bg-white/5 border border-white/5 bg-white/[0.02]"
+      style={{ fontFamily: 'var(--font-mono)' }}>
+      <img src={iconUrl} alt={item.label} className="w-3.5 h-3.5 object-contain opacity-50" />
       {item.label}
     </span>
   );
@@ -56,10 +56,10 @@ function InteractiveFounderCard({ m, index }: { m: any; index: number }) {
     <motion.div
       animate={{ y: floatAnim, rotateZ: rotateAnim }}
       transition={{ duration: 7 + index, ease: "easeInOut", repeat: Infinity }}
-      className="group relative bg-[#09090b]/80 border border-white/5 rounded-[40px] p-8 md:p-12 flex flex-col items-center justify-center text-center overflow-hidden h-full backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+      className="group relative bg-surface border border-white/5 rounded-[40px] p-8 md:p-12 flex flex-col items-center justify-center text-center overflow-hidden h-full backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
     >
       {/* Background ambient lighting from the video's color */}
-      <div className={`absolute inset-0 opacity-10 blur-[80px] rounded-full mix-blend-screen pointer-events-none transition-opacity duration-700 group-hover:opacity-30 ${index === 0 ? 'bg-accent-cyan' : 'bg-accent'}`} />
+      <div className={`absolute inset-0 opacity-5 blur-[80px] rounded-full mix-blend-screen pointer-events-none transition-opacity duration-700 group-hover:opacity-15 bg-accent`} />
       
       {/* Core Video */}
       <div className="w-56 h-56 md:w-72 md:h-72 relative mb-10 rounded-full overflow-hidden shadow-[inset_0_0_20px_rgba(0,0,0,0.8),0_10px_40px_rgba(0,0,0,0.5)] border border-white/5 ring-1 ring-white/10 group-hover:scale-[1.03] transition-transform duration-1000">
@@ -68,13 +68,13 @@ function InteractiveFounderCard({ m, index }: { m: any; index: number }) {
 
       <div className="relative z-10 w-full">
         <h3 className="text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>{m.name}</h3>
-        <p className={`text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full inline-block border mb-6 ${index === 0 ? 'text-accent-cyan bg-accent-cyan/10 border-accent-cyan/20' : 'text-accent bg-accent/10 border-accent/20'}`} style={{ fontFamily: 'var(--font-mono)' }}>
+        <p className="text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full inline-block border mb-6 text-accent bg-accent/5 border-accent/20" style={{ fontFamily: 'var(--font-mono)' }}>
           {m.role}
         </p>
         <p className="text-base text-ink-500 leading-relaxed font-medium max-w-sm mx-auto mb-10">{m.bio}</p>
         
         <a href={m.linkedin} target="_blank" rel="noopener noreferrer" 
-           className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-ink-500 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full border border-white/5 hover:border-white/20">
+           className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-ink-500 hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-full border border-white/5 hover:border-white/20 font-mono">
            LINKEDIN
         </a>
       </div>
@@ -110,22 +110,21 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center gap-2 text-[11px] font-bold text-ink-500 mb-6 uppercase tracking-widest" style={{ fontFamily: 'var(--font-mono)' }}>
-            <span className="text-accent-cyan/80">{`//`}</span>
+            <span className="text-accent">{`//`}</span>
             <span>05 / 06 · I RISULTATI</span>
           </div>
 
-          <p className="text-sm font-bold uppercase tracking-widest text-white/40 mb-8"
+          <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-8"
             style={{ fontFamily: 'var(--font-mono)' }}>
             {t('cases_eyebrow')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {products.map((p) => (
-              <div key={p.name} className="bg-white/5 backdrop-blur-xl rounded-3xl p-8"
-                style={{ border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+              <div key={p.name} className="bg-surface rounded-3xl p-8 border border-white/5 shadow-2xl">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>{p.name}</h3>
-                  <span className="text-[10px] font-bold px-3 py-1 rounded-full bg-accent/20 text-accent"
-                    style={{ fontFamily: 'var(--font-mono)', border: '1px solid rgba(16,185,129,0.3)' }}>
+                  <span className="text-[10px] font-bold px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20"
+                    style={{ fontFamily: 'var(--font-mono)' }}>
                     {p.status}
                   </span>
                 </div>
