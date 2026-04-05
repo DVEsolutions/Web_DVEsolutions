@@ -91,23 +91,20 @@ export default function CtaFinale() {
           </div>
         </motion.div>
 
-        {/* Technical Code Headline */}
-        <motion.div
+        {/* Headline */}
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-          className="mb-8"
+          className="text-5xl md:text-7xl lg:text-[100px] font-bold text-white mb-8 leading-[1.0] tracking-tighter"
+          style={{ fontFamily: 'var(--font-display)' }}
         >
-          <div className="text-left font-mono text-sm text-white/20 mb-2 pl-4">
-            {`// Initialization complete.`}
-          </div>
-          <h2 className="text-4xl md:text-6xl lg:text-[90px] font-bold text-white leading-[0.9] tracking-tighter mb-4"
-            style={{ fontFamily: 'var(--font-display)' }}>
-            <span className="text-accent">launchlab</span> init<br />
-            --project=<span className="text-accent">&quot;{t('headline_2')}&quot;</span>
-          </h2>
-        </motion.div>
+          {t('headline_1')} <br className="hidden md:block" />
+          <span className="text-accent italic">
+            {t('headline_2')}
+          </span>
+        </motion.h2>
 
         {/* Subline with technical font */}
         <motion.p
