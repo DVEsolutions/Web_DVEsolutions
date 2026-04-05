@@ -10,15 +10,15 @@
 }
 
 @theme {
-  --color-background: #09090b;
-  --color-surface: #18181b;
-  --color-border-color: rgba(255, 255, 255, 0.08);
-  --color-border-faint: rgba(255, 255, 255, 0.03);
-  --color-ink-900: #ffffff;
-  --color-ink-500: #a1a1aa; /* Zinc 400 */
-  --color-accent: #10b981; /* Emerald 500 */
-  --color-accent-dark: #059669; /* Emerald 600 */
-  --color-accent-cyan: #06b6d4; /* Cyan 500 */
+  --color-background: #030303;
+  --color-surface: #0a0a0a;
+  --color-border-color: rgba(255, 255, 255, 0.06);
+  --color-border-faint: rgba(255, 255, 255, 0.02);
+  --color-ink-900: #fafafa;
+  --color-ink-500: #71717a; /* Zinc 500 */
+  --color-accent: #ff5a1f; /* Firecrawl Orange */
+  --color-accent-dark: #e64a19;
+  --color-accent-cyan: #ffab91; /* Light Orange for gradients */
   --color-dark-bg: #000000;
   
   --font-display: var(--font-sora), 'Sora', sans-serif;
@@ -28,6 +28,23 @@
 
   /* Fast transitions for snappy feeling */
   --transition-timing-snappy: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes border-beam {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+.animate-border-beam {
+  animation: border-beam 4s linear infinite;
+}
+
+.spotlight-glow {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 90, 31, 0.06),
+    transparent 40%
+  );
 }
 
 html {
