@@ -20,7 +20,7 @@ export default function DevSymbolsBackground() {
     let animationFrameId: number;
     let generation = 0;
     const cellSize = 20;
-    const transitionSpeed = 0.1;
+    const transitionSpeed = 0.03;
 
     canvas.width = parent.offsetWidth;
     canvas.height = parent.offsetHeight;
@@ -36,8 +36,8 @@ export default function DevSymbolsBackground() {
         Array(cols)
           .fill(null)
           .map(() => ({
-            alive: Math.random() > 0.8,
-            opacity: Math.random() > 0.8 ? 0.7 : 0,
+            alive: Math.random() > 0.85,
+            opacity: Math.random() > 0.85 ? 0.5 : 0,
             symbol: randomSymbol(),
           })),
       );
@@ -68,9 +68,9 @@ export default function DevSymbolsBackground() {
         for (let j = 0; j < cols; j++) {
           const cell = grid[i][j];
           if (cell.alive && cell.opacity < 1) {
-            cell.opacity = Math.min(cell.opacity + transitionSpeed, 0.8);
+            cell.opacity = Math.min(cell.opacity + transitionSpeed, 0.6);
           } else if (!cell.alive && cell.opacity > 0) {
-            cell.opacity = Math.max(cell.opacity - transitionSpeed * 0.4, 0);
+            cell.opacity = Math.max(cell.opacity - transitionSpeed * 0.3, 0);
           }
 
           if (cell.opacity > 0.02) {
@@ -117,7 +117,7 @@ export default function DevSymbolsBackground() {
       grid = next;
       setTimeout(() => {
         animationFrameId = requestAnimationFrame(draw);
-      }, 120);
+      }, 200);
     };
 
     draw();

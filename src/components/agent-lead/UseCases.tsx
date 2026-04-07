@@ -2,8 +2,30 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import UseCaseChatPlayer from '@/components/remotion/agent-lead/UseCaseChatPlayer';
+import FeatureDivider from '@/components/effects/FeatureDivider';
+import VerticalLines from '@/components/effects/VerticalLines';
+import DevSymbolsBackground from '@/components/effects/DevSymbolsBackground';
 
 const TAB_KEYS = ['restaurant', 'ecommerce', 'agency', 'saas', 'professional', 'realestate'] as const;
+
+const TAB_COLORS: Record<string, string> = {
+  restaurant: '#ea580c',
+  ecommerce: '#f97316',
+  agency: '#8b5cf6',
+  saas: '#3b82f6',
+  professional: '#0d9488',
+  realestate: '#059669',
+};
+
+const TAB_NAMES: Record<string, string> = {
+  restaurant: 'Ristorante',
+  ecommerce: 'Shop',
+  agency: 'Agenzia',
+  saas: 'SaaS App',
+  professional: 'Studio',
+  realestate: 'Immobiliare',
+};
 
 export default function UseCases() {
   const t = useTranslations('agent_lead');
@@ -11,9 +33,26 @@ export default function UseCases() {
 
   const currentKey = TAB_KEYS[activeTab];
 
+  const chatLabels = {
+    messages: [
+      { text: t(`${currentKey}_chat.bot1`), isBot: true },
+      { text: t(`${currentKey}_chat.user1`), isBot: false },
+      { text: t(`${currentKey}_chat.bot2`), isBot: true },
+      { text: t(`${currentKey}_chat.user2`), isBot: false },
+      { text: t(`${currentKey}_chat.bot3`), isBot: true },
+    ],
+    badge: t(`${currentKey}_chat.badge`),
+    businessName: TAB_NAMES[currentKey],
+    accentColor: TAB_COLORS[currentKey],
+  };
+
   return (
-    <section id="cases" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <>
+    <FeatureDivider className="my-16 max-w-6xl" />
+    <section id="cases" className="relative w-full max-w-6xl mx-auto py-20 px-4 overflow-hidden">
+      <DevSymbolsBackground />
+      <VerticalLines />
+      <div className="relative z-[5]">
         {/* Section label */}
         <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
           {t('cases.section_label')}
@@ -23,12 +62,12 @@ export default function UseCases() {
         {/* Title */}
         <p className="mt-4 text-3xl md:text-4xl font-semibold tracking-tighter text-gray-900">
           {t('cases.title_1')}{' '}
-          <span className="text-orange-500">{t('cases.title_highlight')}</span>
+          <span className="text-orange-500">{t('cases.title_highlight')}</span>{' '}
           {t('cases.title_2')}
         </p>
 
         {/* Tabs */}
-        <div className="mt-10 flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="mt-10 flex gap-2 overflow-x-auto pb-2">
           {TAB_KEYS.map((key, i) => (
             <button
               key={key}
@@ -46,8 +85,8 @@ export default function UseCases() {
 
         {/* Content area */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* Left column */}
-          <div>
+          {/* Left column — info */}
+          <div className="rounded-xl bg-white/80 backdrop-blur-sm p-5 ring-1 ring-black/5">
             <h3 className="text-2xl font-semibold text-gray-900 tracking-tight">
               {t(`cases.${currentKey}_title`)}
             </h3>
@@ -76,12 +115,13 @@ export default function UseCases() {
             </ul>
           </div>
 
-          {/* Right column - placeholder */}
-          <div className="rounded-xl bg-white ring-1 ring-black/5 shadow-lg h-[400px] flex items-center justify-center">
-            <span className="text-gray-400">Chat demo</span>
+          {/* Right column — Remotion chat */}
+          <div>
+            <UseCaseChatPlayer labels={chatLabels} resetKey={activeTab} />
           </div>
         </div>
       </div>
     </section>
+    </>
   );
 }

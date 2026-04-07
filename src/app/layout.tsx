@@ -47,6 +47,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         className={`${inter.variable} ${ibmPlexMono.variable} min-h-screen overflow-x-hidden scroll-auto bg-gray-50 antialiased selection:bg-orange-100 selection:text-orange-600`}
         style={{ fontFamily: 'var(--font-body)' }}
       >
+        {/* Navbar portal target — outside Lenis wrapper so position:fixed works */}
+        <div id="navbar-portal" className="fixed inset-x-0 top-0 z-50" />
         <LenisProvider>
           {children}
         </LenisProvider>

@@ -2,6 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import FeatureDivider from '@/components/effects/FeatureDivider';
+import VerticalLines from '@/components/effects/VerticalLines';
+import DiagonalSVG from '@/components/effects/DiagonalSVG';
 
 const steps = [1, 2, 3] as const;
 
@@ -9,8 +12,12 @@ export default function HowItWorks() {
   const t = useTranslations('agent_lead');
 
   return (
-    <section id="how" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <>
+    <FeatureDivider className="my-16 max-w-6xl" />
+    <section id="how" className="relative py-20 px-4 mx-auto max-w-6xl overflow-hidden">
+      <VerticalLines />
+      <DiagonalSVG id="how-diagonal" className="absolute inset-0 mask-[radial-gradient(ellipse_80%_60%_at_50%_50%,black_40%,transparent_100%)]" />
+      <div className="relative z-[5] max-w-4xl mx-auto">
         {/* Section label */}
         <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
           {t('how.section_label')}
@@ -52,7 +59,7 @@ export default function HowItWorks() {
                   {t(`how.step${step}_desc`)}
                 </p>
                 <div className="mt-3 rounded-lg bg-gray-950 px-4 py-3 font-mono text-sm text-orange-400">
-                  {t(`how.step${step}_code`)}
+                  {t.raw(`how.step${step}_code`)}
                 </div>
               </div>
             </motion.div>
@@ -60,5 +67,6 @@ export default function HowItWorks() {
         </div>
       </div>
     </section>
+    </>
   );
 }

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import FeatureDivider from "@/components/effects/FeatureDivider";
+import VerticalLines from "@/components/effects/VerticalLines";
 
 const cards = [
   { iconKey: "pain.card1_icon", hookKey: "pain.card1_hook", bodyKey: "pain.card1_body" },
@@ -13,8 +15,11 @@ export default function PainSection() {
   const t = useTranslations("agent_lead");
 
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <>
+    <FeatureDivider className="my-16 max-w-6xl" />
+    <section className="relative py-20 px-4 mx-auto max-w-6xl">
+      <VerticalLines />
+      <div className="relative z-[5]">
         <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
           {t("pain.section_label")}
           <div className="absolute top-1 -left-[8px] h-5 w-[3px] rounded-r-sm bg-orange-500" />
@@ -49,5 +54,6 @@ export default function PainSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }

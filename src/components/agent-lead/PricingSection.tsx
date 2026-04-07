@@ -2,6 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import FeatureDivider from '@/components/effects/FeatureDivider';
+import VerticalLines from '@/components/effects/VerticalLines';
 
 export default function PricingSection() {
   const t = useTranslations('agent_lead');
@@ -18,8 +20,11 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <>
+    <FeatureDivider className="my-16 max-w-6xl" />
+    <section id="pricing" className="relative py-20 px-4 mx-auto max-w-6xl">
+      <VerticalLines />
+      <div className="relative z-[5]">
         <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
           {t('pricing.section_label')}
           <div className="absolute top-1 -left-[8px] h-5 w-[3px] rounded-r-sm bg-orange-500" />
@@ -90,5 +95,6 @@ export default function PricingSection() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

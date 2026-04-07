@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import FeatureDivider from "@/components/effects/FeatureDivider";
 
 const stats = [
   { numberKey: "stats.stat1_number", labelKey: "stats.stat1_label" },
@@ -14,6 +15,8 @@ export default function StatsBar() {
   const t = useTranslations("agent_lead");
 
   return (
+    <>
+    <FeatureDivider className="my-16 max-w-6xl" />
     <section className="py-16 px-4">
       <div className="max-w-5xl mx-auto">
         <motion.div
@@ -39,5 +42,6 @@ export default function StatsBar() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

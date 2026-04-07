@@ -258,6 +258,62 @@
       "realestate_b3": "Rezervace prohlídek",
       "realestate_b4": "Info o čtvrti a okolí"
     },
+    "hero_chat": {
+      "bot1": "Ahoj! 👋 Jak vám mohu pomoci?",
+      "user1": "Chtěl bych vědět více o vašich službách",
+      "bot2": "Jistě! Nabízíme řešení na míru. Jaký je váš obor?",
+      "user2": "Mám e-shop s oblečením",
+      "bot3": "Skvěle! Pošlu vám personalizovanou nabídku. Jaký je váš email?",
+      "badge": "Kvalifikovaný lead odeslán ✓"
+    },
+    "restaurant_chat": {
+      "bot1": "Ahoj! 👋 Chcete rezervovat stůl nebo máte dotazy k menu?",
+      "user1": "Chtěl bych rezervovat na sobotu večer, 4 osoby",
+      "bot2": "Výborně! Na sobotu večer mám volno v 19:30 a 21:00. Co preferujete?",
+      "user2": "21:00 vyhovuje. Jméno Marco Rossi",
+      "bot3": "Rezervace potvrzena! Marco Rossi, sobota 21:00, 4 osoby. Na jaký email poslat potvrzení?",
+      "badge": "Kvalifikovaný lead odeslán do CRM ✓"
+    },
+    "ecommerce_chat": {
+      "bot1": "Ahoj! Mohu vám pomoci najít správný produkt?",
+      "user1": "Hledám dárek pro manželku, rozpočet 50-80€",
+      "bot2": "Skvělá volba! Doporučuji naši kolekci 'Essentials'. Chcete vidět top 3 bestsellery?",
+      "user2": "Ano, prosím!",
+      "bot3": "Top 3: 1) Skincare set €65 2) Canvas taška €72 3) Svíčky box €55. Poslat odkaz?",
+      "badge": "Kvalifikovaný lead odeslán do CRM ✓"
+    },
+    "agency_chat": {
+      "bot1": "Ahoj! Hledáte podporu pro digitální projekt?",
+      "user1": "Ano, potřebujeme redesign webu",
+      "bot2": "Rozumím. Jaký typ firmy jste a kolik stránek má váš současný web?",
+      "user2": "Advokátní kancelář, asi 15 stránek. Chceme něco modernějšího",
+      "bot3": "Pro redesign 15 stránek začínáme od €3 000. Mohu vás spojit s project managerem?",
+      "badge": "Kvalifikovaný lead odeslán do CRM ✓"
+    },
+    "saas_chat": {
+      "bot1": "Ahoj! Chcete vědět, jak funguje naše platforma?",
+      "user1": "Ano, kolik stojí pro tým 20 lidí?",
+      "bot2": "Pro tým 20 je Team plán €199/měsíc. Zahrnuje všechny integrace. Máte specifické potřeby?",
+      "user2": "Potřebujeme integraci se Salesforce",
+      "bot3": "Salesforce je zahrnut v Team plánu! Chcete si rezervovat 15minutové demo?",
+      "badge": "Kvalifikovaný lead odeslán do CRM ✓"
+    },
+    "professional_chat": {
+      "bot1": "Dobrý den! Jak vám mohu pomoci?",
+      "user1": "Potřebuji daňové poradenství pro své podnikání",
+      "bot2": "Jistě. Jste OSVČ nebo máte společnost? Jak dlouho podnikáte?",
+      "user2": "OSVČ, 2 roky. Paušální daň",
+      "bot3": "Pro paušální daň nabízíme poradenství + přiznání za €400/rok. Chcete rezervovat bezplatnou konzultaci?",
+      "badge": "Kvalifikovaný lead odeslán do CRM ✓"
+    },
+    "realestate_chat": {
+      "bot1": "Ahoj! Hledáte bydlení nebo chcete prodat nemovitost?",
+      "user1": "Hledám byt 2+kk k pronájmu v Praze, max 25 000 Kč",
+      "bot2": "Mám 3 byty ve vaší cenové kategorii: Vinohrady, Karlín a Žižkov. Chcete detaily?",
+      "user2": "Ano, hlavně Karlín",
+      "bot3": "Byt v Karlíně: 55m², 22 000 Kč/měsíc, volný ihned. Nechte mi číslo pro prohlídku!",
+      "badge": "Kvalifikovaný lead odeslán do CRM ✓"
+    },
     "pricing": {
       "section_label": "Ceník",
       "title_1": "Jeden tarif.",

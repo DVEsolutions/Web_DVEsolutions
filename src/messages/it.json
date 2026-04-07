@@ -258,6 +258,62 @@
       "realestate_b3": "Prenotazione visite",
       "realestate_b4": "Info quartiere e zona"
     },
+    "hero_chat": {
+      "bot1": "Ciao! 👋 Come posso aiutarti oggi?",
+      "user1": "Vorrei sapere di più sui vostri servizi",
+      "bot2": "Certo! Offriamo soluzioni personalizzate. Qual è il tuo settore?",
+      "user2": "Ho un e-commerce di abbigliamento",
+      "bot3": "Perfetto! Ti mando una proposta personalizzata. Qual è la tua email?",
+      "badge": "Lead qualificato inviato ✓"
+    },
+    "restaurant_chat": {
+      "bot1": "Ciao! 👋 Vuoi prenotare un tavolo o hai domande sul menu?",
+      "user1": "Vorrei prenotare per sabato sera, 4 persone",
+      "bot2": "Perfetto! Per sabato sera ho disponibilità alle 19:30 e 21:00. Quale preferisci?",
+      "user2": "21:00 va bene. Il nome è Marco Rossi",
+      "bot3": "Prenotazione confermata! Marco Rossi, sabato 21:00, 4 persone. A quale email mando la conferma?",
+      "badge": "Lead qualificato inviato al CRM ✓"
+    },
+    "ecommerce_chat": {
+      "bot1": "Ciao! Posso aiutarti a trovare il prodotto giusto?",
+      "user1": "Cerco un regalo per mia moglie, budget 50-80€",
+      "bot2": "Ottima scelta! Ti consiglio la nostra collezione 'Essentials'. Vuoi che ti mostri i 3 più venduti?",
+      "user2": "Sì, grazie!",
+      "bot3": "Ecco i top 3: 1) Set skincare €65 2) Borsa canvas €72 3) Box candele €55. Ti mando il link?",
+      "badge": "Lead qualificato inviato al CRM ✓"
+    },
+    "agency_chat": {
+      "bot1": "Ciao! Stai cercando supporto per un progetto digitale?",
+      "user1": "Sì, ci serve un redesign del sito aziendale",
+      "bot2": "Capito. Che tipo di azienda siete e quante pagine ha il sito attuale?",
+      "user2": "Studio legale, circa 15 pagine. Vogliamo qualcosa di più moderno",
+      "bot3": "Per un redesign di 15 pagine, partiamo da €3.000. Posso farti contattare da un project manager?",
+      "badge": "Lead qualificato inviato al CRM ✓"
+    },
+    "saas_chat": {
+      "bot1": "Ciao! Vuoi sapere come funziona la nostra piattaforma?",
+      "user1": "Sì, quanto costa per un team di 20 persone?",
+      "bot2": "Per team di 20 il piano Team è €199/mese. Include tutte le integrazioni. Avete esigenze specifiche?",
+      "user2": "Ci serve integrazione con Salesforce",
+      "bot3": "Salesforce è incluso nel piano Team! Vuoi prenotare una demo di 15 minuti?",
+      "badge": "Lead qualificato inviato al CRM ✓"
+    },
+    "professional_chat": {
+      "bot1": "Buongiorno! Come posso aiutarti?",
+      "user1": "Ho bisogno di una consulenza fiscale per la mia partita IVA",
+      "bot2": "Certo. Sei un libero professionista o hai una società? Da quanto tempo?",
+      "user2": "Libero professionista, da 2 anni. Regime forfettario",
+      "bot3": "Per il forfettario offriamo consulenza + dichiarazione a €400/anno. Prenoti un incontro gratuito?",
+      "badge": "Lead qualificato inviato al CRM ✓"
+    },
+    "realestate_chat": {
+      "bot1": "Ciao! Cerchi casa o vuoi vendere un immobile?",
+      "user1": "Cerco un bilocale in affitto a Milano, budget max 1.200€",
+      "bot2": "Ho 3 bilocali disponibili: zona Navigli, Isola e Porta Romana. Vuoi le schede?",
+      "user2": "Sì, soprattutto zona Isola",
+      "bot3": "Bilocale zona Isola: 55mq, €1.100/mese, disponibile subito. Lasciami il tuo numero per una visita!",
+      "badge": "Lead qualificato inviato al CRM ✓"
+    },
     "pricing": {
       "section_label": "Pricing",
       "title_1": "Un piano.",

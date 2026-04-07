@@ -83,6 +83,14 @@ body {
 .delay-700 { animation-delay: 700ms; }
 .delay-900 { animation-delay: 900ms; }
 
+/* ── Lenis fix: will-change-transform breaks position:fixed ── */
+
+.lenis > .will-change-transform,
+[data-lenis-prevent] > .will-change-transform,
+div.will-change-transform.min-h-screen {
+  will-change: auto !important;
+}
+
 /* ── Reduced motion ── */
 
 @media (prefers-reduced-motion: reduce) {

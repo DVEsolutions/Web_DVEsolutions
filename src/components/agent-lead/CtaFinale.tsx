@@ -1,35 +1,51 @@
-'use client';
+"use client";
 
 import { useTranslations } from 'next-intl';
+import FeatureDivider from '@/components/effects/FeatureDivider';
+import CtaBackground from '@/components/effects/CtaBackground';
 
 export default function CtaFinale() {
   const t = useTranslations('agent_lead');
 
   return (
-    <section className="relative py-24 px-4 bg-gray-900">
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-        }}
-      />
+    <>
+      <FeatureDivider className="my-16 max-w-6xl" />
+      <section id="cta" className="relative mx-auto max-w-6xl mt-12 mb-40 px-4 xl:px-0 overflow-hidden">
+        {/* Game of Life background */}
+        <div className="absolute inset-0 -z-10 flex items-center justify-center">
+          <CtaBackground />
+        </div>
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter text-white">
-          {t('cta.title_1')}{' '}
-          <span className="text-orange-500">{t('cta.title_highlight')}</span>
-        </h2>
+        <div className="relative z-10 grid items-center gap-8 sm:grid-cols-6">
+          <div className="sm:col-span-4">
+            <h2 className="text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
+              {t('cta.title_1')}{' '}
+              <span className="text-orange-500">{t('cta.title_highlight')}</span>
+            </h2>
 
-        <button className="mt-8 inline-flex items-center justify-center gap-1 rounded-md border-b-[1.5px] border-orange-700 bg-gradient-to-b from-orange-400 to-orange-500 px-6 py-4 text-base font-semibold text-white shadow-[0_0_0_2px_rgba(0,0,0,0.04)] hover:shadow-orange-300 transition-all">
-          {t('cta.button')}
-        </button>
+            <p className="mt-3 mb-8 text-lg text-gray-600">
+              {t('cta.note')}
+            </p>
 
-        <p className="mt-4 text-sm text-gray-400">
-          {t('cta.note')}
-        </p>
-      </div>
-    </section>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center gap-1 rounded-md border-b-[1.5px] border-orange-700 bg-gradient-to-b from-orange-400 to-orange-500 px-6 py-3.5 text-sm font-medium leading-4 tracking-wide text-white shadow-[0_0_0_2px_rgba(0,0,0,0.04),0_0_14px_0_rgba(255,255,255,0.19)] transition-all hover:shadow-orange-300"
+              >
+                {t('cta.button')}
+              </a>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-6 text-sm text-gray-500">
+              <span className="flex items-center gap-2">
+                <svg className="size-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+                {t('pricing.note')}
+              </span>
+            </div>
+          </div>
+          <div className="sm:col-span-2" />
+        </div>
+      </section>
+    </>
   );
 }

@@ -258,6 +258,62 @@
       "realestate_b3": "Viewing booking",
       "realestate_b4": "Neighborhood & area info"
     },
+    "hero_chat": {
+      "bot1": "Hi! 👋 How can I help you today?",
+      "user1": "I'd like to know more about your services",
+      "bot2": "Sure! We offer customized solutions. What's your industry?",
+      "user2": "I run a clothing e-commerce",
+      "bot3": "Great! I'll send you a personalized proposal. What's your email?",
+      "badge": "Qualified lead sent ✓"
+    },
+    "restaurant_chat": {
+      "bot1": "Hi! 👋 Want to book a table or have questions about the menu?",
+      "user1": "I'd like to book for Saturday evening, 4 people",
+      "bot2": "Perfect! For Saturday evening I have availability at 7:30 PM and 9:00 PM. Which do you prefer?",
+      "user2": "9:00 PM works. The name is Marco Rossi",
+      "bot3": "Booking confirmed! Marco Rossi, Saturday 9 PM, 4 people. What email should I send confirmation to?",
+      "badge": "Qualified lead sent to CRM ✓"
+    },
+    "ecommerce_chat": {
+      "bot1": "Hi! Can I help you find the right product?",
+      "user1": "Looking for a gift for my wife, budget 50-80€",
+      "bot2": "Great choice! I recommend our 'Essentials' collection. Want me to show the top 3 sellers?",
+      "user2": "Yes, please!",
+      "bot3": "Here's the top 3: 1) Skincare set €65 2) Canvas bag €72 3) Candle box €55. Want the direct link?",
+      "badge": "Qualified lead sent to CRM ✓"
+    },
+    "agency_chat": {
+      "bot1": "Hi! Are you looking for support with a digital project?",
+      "user1": "Yes, we need a website redesign",
+      "bot2": "Got it. What type of company are you and how many pages does your current site have?",
+      "user2": "Law firm, about 15 pages. We want something more modern",
+      "bot3": "For a 15-page redesign, our projects start from €3,000. Can I have a project manager contact you?",
+      "badge": "Qualified lead sent to CRM ✓"
+    },
+    "saas_chat": {
+      "bot1": "Hi! Want to learn how our platform works?",
+      "user1": "Yes, how much for a team of 20?",
+      "bot2": "For teams of 20, the Team plan is €199/month. Includes all integrations. Any specific needs?",
+      "user2": "We need Salesforce integration",
+      "bot3": "Salesforce is included in the Team plan! Want to book a 15-minute demo?",
+      "badge": "Qualified lead sent to CRM ✓"
+    },
+    "professional_chat": {
+      "bot1": "Hello! How can I help you?",
+      "user1": "I need tax consulting for my freelance business",
+      "bot2": "Sure. Are you a freelancer or do you have a company? How long have you been operating?",
+      "user2": "Freelancer, 2 years. Flat-rate tax regime",
+      "bot3": "For flat-rate we offer consulting + filing at €400/year. Would you like to book a free intro call?",
+      "badge": "Qualified lead sent to CRM ✓"
+    },
+    "realestate_chat": {
+      "bot1": "Hi! Looking to buy/rent or sell a property?",
+      "user1": "Looking for a 1-bedroom rental in Milan, max €1,200",
+      "bot2": "I have 3 apartments available: Navigli, Isola, and Porta Romana areas. Want the details?",
+      "user2": "Yes, especially Isola area",
+      "bot3": "Isola apartment: 55sqm, €1,100/month, available immediately. Leave your number to schedule a viewing!",
+      "badge": "Qualified lead sent to CRM ✓"
+    },
     "pricing": {
       "section_label": "Pricing",
       "title_1": "One plan.",

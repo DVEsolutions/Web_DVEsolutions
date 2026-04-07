@@ -17,6 +17,7 @@ export default function IdeaToLaunchPlayer({ labels }: { labels: AnimationLabels
         loop
         autoPlay
         controls={false}
+        acknowledgeRemotionLicense
         style={{
           width: "100%",
           aspectRatio: "720 / 450",

@@ -2,13 +2,27 @@
 
 import { useTranslations } from 'next-intl';
 import { FadeContainer, FadeDiv, FadeSpan } from '@/components/effects/Fade';
+import HeroChatPlayer from '@/components/remotion/agent-lead/HeroChatPlayer';
+import DevSymbolsBackground from '@/components/effects/DevSymbolsBackground';
 
 export default function HeroSection() {
   const t = useTranslations('agent_lead');
 
+  const heroChatLabels = {
+    messages: [
+      { text: t('hero_chat.bot1'), isBot: true },
+      { text: t('hero_chat.user1'), isBot: false },
+      { text: t('hero_chat.bot2'), isBot: true },
+      { text: t('hero_chat.user2'), isBot: false },
+      { text: t('hero_chat.bot3'), isBot: true },
+    ],
+    badge: t('hero_chat.badge'),
+  };
+
   return (
-    <section className="pt-44 pb-20 px-4">
-      <FadeContainer className="max-w-4xl mx-auto text-center">
+    <section className="relative pt-44 pb-20 px-4 overflow-hidden">
+      <DevSymbolsBackground />
+      <FadeContainer className="relative z-[5] max-w-4xl mx-auto text-center">
         {/* Badge with pulse dot */}
         <FadeDiv>
           <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 ring-1 ring-black/10 shadow-lg shadow-orange-400/20 text-sm font-medium text-gray-700">
@@ -40,7 +54,7 @@ export default function HeroSection() {
             {t('hero.cta_primary')}
           </a>
           <a
-            href="#method"
+            href="#cases"
             className="rounded-sm border border-gray-300 bg-white px-6 py-3.5 text-sm font-semibold text-gray-900 shadow-xs hover:border-orange-300 hover:text-orange-600 transition-all"
           >
             {t('hero.cta_secondary')}
@@ -52,12 +66,10 @@ export default function HeroSection() {
           <p className="mt-4 text-sm text-gray-500">{t('hero.note')}</p>
         </FadeDiv>
 
-        {/* Remotion player placeholder */}
-        <FadeDiv className="mt-16 mx-auto max-w-3xl rounded-xl bg-white ring-1 ring-black/5 shadow-2xl overflow-hidden">
-          <div className="h-[400px] flex items-center justify-center bg-gray-50">
-            <span className="text-sm text-gray-400">Chat demo</span>
-          </div>
-        </FadeDiv>
+        {/* Chat animation */}
+        <div className="mt-16 mx-auto max-w-3xl animate-fade-up delay-700">
+          <HeroChatPlayer labels={heroChatLabels} />
+        </div>
       </FadeContainer>
     </section>
   );
