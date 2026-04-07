@@ -1,4 +1,5 @@
-
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import PainCards from '@/components/sections/PainCards';
 import Metodo from '@/components/sections/Metodo';
@@ -9,14 +10,18 @@ import CtaFinale from '@/components/sections/CtaFinale';
 
 export default function HomePage() {
   return (
-    <main className="relative mx-auto flex flex-col">
-      <Hero />
-      <PainCards />
-      <Metodo />
-      <Processo />
-      <Pricing />
-      <SocialProof />
-      <CtaFinale />
-    </main>
+    <>
+      <Navbar />
+      <main className="relative mx-auto flex flex-col">
+        <Hero />
+        <PainCards />
+        <Metodo />
+        <Processo />
+        <Pricing />
+        <SocialProof />
+        <CtaFinale />
+      </main>
+      <Footer />
+    </>
   );
 }

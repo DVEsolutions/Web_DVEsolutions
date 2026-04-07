@@ -2,8 +2,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 
 async function loadMessages(locale: string) {
   switch (locale) {
@@ -27,14 +25,11 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
-
   const messages = await loadMessages(locale);
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <Navbar />
       {children}
-      <Footer />
     </NextIntlClientProvider>
   );
 }
