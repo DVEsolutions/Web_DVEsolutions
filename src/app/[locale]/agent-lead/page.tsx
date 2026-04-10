@@ -10,6 +10,7 @@ import UseCases from '@/components/agent-lead/UseCases';
 import PricingSection from '@/components/agent-lead/PricingSection';
 import CtaFinale from '@/components/agent-lead/CtaFinale';
 import Footer from '@/components/layout/Footer';
+import Script from 'next/script';
 
 export default function AgentLeadPage() {
   const t = useTranslations('agent_lead');
@@ -37,6 +38,7 @@ export default function AgentLeadPage() {
         <CtaFinale />
       </main>
       <Footer />
+      <Script src="https://agentlead.fl1.it/embed/dvesolutions.js" strategy="lazyOnload" />
     </>
   );
 }
