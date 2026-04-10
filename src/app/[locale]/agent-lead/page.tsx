@@ -38,6 +38,7 @@ export default function AgentLeadPage() {
         <CtaFinale />
       </main>
       <Footer />
+      <div id="lq-anchor"></div>
       <Script src="https://agentlead.fl1.it/embed/dvesolutions.js" strategy="lazyOnload" />
     </>
   );
