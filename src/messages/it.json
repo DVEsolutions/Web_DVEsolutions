@@ -344,5 +344,35 @@
     "footer": {
       "copyright": "© 2026 DVEsolutions · Agent Lead. Tutti i diritti riservati."
     }
+  },
+  "lead_dashboard": {
+    "token_title": "Accedi alla tua dashboard",
+    "token_subtitle": "Inserisci il token che hai ricevuto via email per visualizzare i tuoi lead.",
+    "token_placeholder": "Il tuo token API",
+    "token_submit": "Accedi",
+    "token_invalid": "Token non valido. Controlla l'email ricevuta da DVEsolutions.",
+    "skill_not_found": "Questa dashboard non esiste. Controlla il link ricevuto.",
+    "network_error": "Impossibile contattare il server. Riprova tra qualche istante.",
+    "stats_total_leads": "Lead totali",
+    "stats_leads_30d": "Ultimi 30 giorni",
+    "stats_qualification_rate": "Tasso qualificazione",
+    "stats_total_sessions": "Sessioni totali",
+    "table_name": "Nome",
+    "table_email": "Email",
+    "table_phone": "Telefono",
+    "table_company": "Azienda",
+    "table_date": "Data",
+    "table_empty_title": "Nessun lead ancora",
+    "table_empty_subtitle": "Il tuo chatbot sta lavorando — i lead appariranno qui appena qualificati.",
+    "export_csv": "Esporta CSV",
+    "snippet_title": "Il tuo snippet",
+    "snippet_desc": "Copia questo codice e incollalo nel tuo sito prima di </body>.",
+    "snippet_copy": "Copia",
+    "snippet_copied": "Copiato!",
+    "snippet_wordpress": "WordPress: Aspetto → Editor temi → footer.php",
+    "snippet_shopify": "Shopify: Negozio online → Temi → Modifica codice → theme.liquid",
+    "snippet_wix": "Wix: Impostazioni → Codice personalizzato",
+    "snippet_other": "Altro: Incolla prima di </body>",
+    "page_title": "Dashboard Lead"
   }
 }

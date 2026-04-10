@@ -344,5 +344,35 @@
     "footer": {
       "copyright": "© 2026 DVEsolutions · Agent Lead. Všechna práva vyhrazena."
     }
+  },
+  "lead_dashboard": {
+    "token_title": "Pristupte ke svemu dashboardu",
+    "token_subtitle": "Zadejte token, ktery jste obdrzeli emailem, pro zobrazeni vasich leadu.",
+    "token_placeholder": "Vas API token",
+    "token_submit": "Pristoupit",
+    "token_invalid": "Neplatny token. Zkontrolujte email od DVEsolutions.",
+    "skill_not_found": "Tento dashboard neexistuje. Zkontrolujte odkaz.",
+    "network_error": "Server neni dostupny. Zkuste to znovu za chvili.",
+    "stats_total_leads": "Celkem leadu",
+    "stats_leads_30d": "Poslednich 30 dni",
+    "stats_qualification_rate": "Mira kvalifikace",
+    "stats_total_sessions": "Celkem relaci",
+    "table_name": "Jmeno",
+    "table_email": "Email",
+    "table_phone": "Telefon",
+    "table_company": "Firma",
+    "table_date": "Datum",
+    "table_empty_title": "Zatim zadne leady",
+    "table_empty_subtitle": "Vas chatbot pracuje — leady se zde objevi, jakmile budou kvalifikovany.",
+    "export_csv": "Exportovat CSV",
+    "snippet_title": "Vas snippet",
+    "snippet_desc": "Zkopirujte tento kod a vlozte ho na svuj web pred </body>.",
+    "snippet_copy": "Kopirovat",
+    "snippet_copied": "Zkopirovano!",
+    "snippet_wordpress": "WordPress: Vzhled → Editor motivu → footer.php",
+    "snippet_shopify": "Shopify: Online obchod → Motivy → Upravit kod → theme.liquid",
+    "snippet_wix": "Wix: Nastaveni → Vlastni kod",
+    "snippet_other": "Ostatni: Vlozte pred </body>",
+    "page_title": "Dashboard leadu"
   }
 }

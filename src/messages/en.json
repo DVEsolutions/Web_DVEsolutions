@@ -344,5 +344,35 @@
     "footer": {
       "copyright": "© 2026 DVEsolutions · Agent Lead. All rights reserved."
     }
+  },
+  "lead_dashboard": {
+    "token_title": "Access your dashboard",
+    "token_subtitle": "Enter the token you received by email to view your leads.",
+    "token_placeholder": "Your API token",
+    "token_submit": "Access",
+    "token_invalid": "Invalid token. Check the email you received from DVEsolutions.",
+    "skill_not_found": "This dashboard doesn't exist. Check the link you received.",
+    "network_error": "Unable to reach the server. Try again in a moment.",
+    "stats_total_leads": "Total leads",
+    "stats_leads_30d": "Last 30 days",
+    "stats_qualification_rate": "Qualification rate",
+    "stats_total_sessions": "Total sessions",
+    "table_name": "Name",
+    "table_email": "Email",
+    "table_phone": "Phone",
+    "table_company": "Company",
+    "table_date": "Date",
+    "table_empty_title": "No leads yet",
+    "table_empty_subtitle": "Your chatbot is working — leads will appear here once qualified.",
+    "export_csv": "Export CSV",
+    "snippet_title": "Your snippet",
+    "snippet_desc": "Copy this code and paste it on your site before </body>.",
+    "snippet_copy": "Copy",
+    "snippet_copied": "Copied!",
+    "snippet_wordpress": "WordPress: Appearance → Theme Editor → footer.php",
+    "snippet_shopify": "Shopify: Online Store → Themes → Edit code → theme.liquid",
+    "snippet_wix": "Wix: Settings → Custom code",
+    "snippet_other": "Other: Paste before </body>",
+    "page_title": "Lead Dashboard"
   }
 }
