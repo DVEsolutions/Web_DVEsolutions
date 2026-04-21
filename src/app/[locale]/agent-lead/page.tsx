@@ -15,29 +15,6 @@ import Footer from '@/components/layout/Footer';
 export default function AgentLeadPage() {
   const t = useTranslations('agent_lead');
 
-  useEffect(() => {
-    const navbarPortal = document.getElementById('navbar-portal');
-    if (!navbarPortal) return;
-
-    const widgetAnchor = document.createElement('div');
-    widgetAnchor.id = 'lq-anchor';
-    widgetAnchor.style.cssText =
-      'position:absolute;top:20px;right:200px;z-index:51;display:flex;align-items:center;';
-    navbarPortal.appendChild(widgetAnchor);
-
-    const embedScript = document.createElement('script');
-    embedScript.src = 'https://agentlead.fl1.it/embed/dvesolutions.js';
-    embedScript.async = true;
-    document.body.appendChild(embedScript);
-
-    return () => {
-      embedScript.remove();
-      document.querySelector('.lq-nav-item')?.remove();
-      document.querySelector('.lq-panel')?.remove();
-      document.getElementById('lq-styles')?.remove();
-    };
-  }, []);
-
   return (
     <>
       <Navbar
