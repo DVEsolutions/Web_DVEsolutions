@@ -121,7 +121,11 @@
   "social": {
     "section_label": "Tým",
     "team_subtitle": "Lidská inteligence za mechanickým provedením.",
-    "cases_eyebrow": "METODA FUNGUJE. POUŽÍVÁME JI NA SOBĚ.",
+    "cases_eyebrow": "PRODUKTY, KTERÉ JSME JIŽ SPUSTILI.",
+    "agent_lead_name": "Agent Lead",
+    "agent_lead_desc": "AI agent, který v reálném čase kvalifikuje leady přímo na vašem webu. Nastavení za 5 minut, funguje 24/7.",
+    "agent_lead_status": "Live",
+    "agent_lead_cta": "Objevit Agent Lead →",
     "quickfy_name": "QuickFy",
     "quickfy_desc": "AI platforma automatizující operativní marketing pro evropské SME",
     "quickfy_status": "V beta",

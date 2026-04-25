@@ -121,7 +121,11 @@
   "social": {
     "section_label": "Il Team",
     "team_subtitle": "L'intelligenza umana dietro l'esecuzione meccanica.",
-    "cases_eyebrow": "IL METODO FUNZIONA. LO USIAMO SU NOI STESSI.",
+    "cases_eyebrow": "PRODOTTI CHE ABBIAMO GIÀ LANCIATO.",
+    "agent_lead_name": "Agent Lead",
+    "agent_lead_desc": "Agente AI che qualifica i lead in tempo reale direttamente sul tuo sito web. Setup in 5 minuti, funziona 24/7.",
+    "agent_lead_status": "Live",
+    "agent_lead_cta": "Scopri Agent Lead →",
     "quickfy_name": "QuickFy",
     "quickfy_desc": "Piattaforma AI per il marketing operativo delle PMI europee",
     "quickfy_status": "In beta",

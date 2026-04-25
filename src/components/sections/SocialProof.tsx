@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { CineVideo } from '@/components/cine-video';
 import FeatureDivider from '@/components/effects/FeatureDivider';
 import { Divider } from '@/components/effects/Divider';
@@ -51,6 +51,7 @@ function TechPill({ item }: { item: { label: string; icon: string; iconHex?: str
 
 export default function SocialProof() {
   const t = useTranslations('social');
+  const locale = useLocale();
 
   const team = [
     { name: t('daniel_name'), role: t('daniel_role'), bio: t('daniel_bio'), linkedin: 'https://linkedin.com/in/danieldevecchi/', email: 'Daniel@dvesolutions.eu', video: '/videos/core-dan.mp4' },
@@ -142,6 +143,33 @@ export default function SocialProof() {
             {t('cases_eyebrow')}
           </p>
 
+          {/* Agent Lead — full-width featured card */}
+          <motion.a
+            href={`/${locale}/agent-lead`}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="block w-full rounded-xl bg-white p-6 ring-2 ring-orange-500 shadow-2xl shadow-orange-500/10 transition-all hover:shadow-orange-400/20 mb-6 group"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-900 tracking-tight">{t('agent_lead_name')}</h3>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-emerald-200">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    {t('agent_lead_status')}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed max-w-lg">{t('agent_lead_desc')}</p>
+              </div>
+              <span className="text-sm font-semibold text-orange-600 group-hover:text-orange-700 transition-colors whitespace-nowrap self-center">
+                {t('agent_lead_cta')}
+              </span>
+            </div>
+          </motion.a>
+
+          {/* QuickFy + QuickRef */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-0.5">
             {[
               { name: t('quickfy_name'), desc: t('quickfy_desc'), status: t('quickfy_status') },
