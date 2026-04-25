@@ -25,6 +25,28 @@
     "typewriter_2": "s AI.",
     "typewriter_3": "end-to-end."
   },
+  "what_we_build": {
+    "section_label": "Naše Služby",
+    "headline": "Co stavíme.",
+    "subheadline": "Od digitálního produktu po AI systém — end-to-end, bez prostředníků.",
+    "card1_eyebrow": "MVP BUILD",
+    "card1_title": "Od nápadu k živému produktu za 6 týdnů",
+    "card1_desc": "Workshop, interaktivní prototyp a kompletní vývoj. Dodáváme nasazený MVP se zdrojovým kódem a 1 měsíc podpory. Pro zakladatele a startupy, které se chtějí rychle pohybovat.",
+    "card1_tag1": "MVS Workshop",
+    "card1_tag2": "Otestovaný prototyp",
+    "card1_tag3": "Nasazení do produkce",
+    "card1_tag4": "Váš kód",
+    "card1_cta": "Zobrazit ceny",
+    "card2_badge": "AI",
+    "card2_eyebrow": "AI SOLUTIONS",
+    "card2_title": "AI agenti, automatizace a systémy na míru",
+    "card2_desc": "Stavíme AI agenty, automatizace workflow a vlastní integrace pro firmy, které chtějí pracovat chytřeji. Od analýzy po nasazení, end-to-end.",
+    "card2_tag1": "AI agenti",
+    "card2_tag2": "Automatizace workflow",
+    "card2_tag3": "Vlastní integrace",
+    "card2_tag4": "AI infrastruktura",
+    "card2_cta": "Pojďme se pobavit"
+  },
   "pain": {
     "section_label": "Problém",
     "headline": "Poznáváte váš problém?",

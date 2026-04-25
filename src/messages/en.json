@@ -25,6 +25,28 @@
     "typewriter_2": "powered by AI.",
     "typewriter_3": "end-to-end."
   },
+  "what_we_build": {
+    "section_label": "Our Services",
+    "headline": "What we build.",
+    "subheadline": "From digital product to AI system — end-to-end, no intermediaries.",
+    "card1_eyebrow": "MVP BUILD",
+    "card1_title": "From idea to live product in 6 weeks",
+    "card1_desc": "Workshop, interactive prototype and full development. We deliver a deployed MVP with source code and 1 month of support. For founders and startups who want to move fast.",
+    "card1_tag1": "MVS Workshop",
+    "card1_tag2": "Tested prototype",
+    "card1_tag3": "Production deploy",
+    "card1_tag4": "Your code",
+    "card1_cta": "See pricing",
+    "card2_badge": "AI",
+    "card2_eyebrow": "AI SOLUTIONS",
+    "card2_title": "AI agents, automations and custom systems",
+    "card2_desc": "We build AI agents, workflow automations and custom integrations for companies that want to work smarter. From analysis to deploy, end-to-end.",
+    "card2_tag1": "AI Agents",
+    "card2_tag2": "Workflow automation",
+    "card2_tag3": "Custom integrations",
+    "card2_tag4": "AI infrastructure",
+    "card2_cta": "Let's talk"
+  },
   "pain": {
     "section_label": "The Problem",
     "headline": "Do you recognize your problem?",

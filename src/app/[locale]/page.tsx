@@ -10,6 +10,7 @@ import Processo from '@/components/sections/Processo';
 import Pricing from '@/components/sections/Pricing';
 import SocialProof from '@/components/sections/SocialProof';
 import CtaFinale from '@/components/sections/CtaFinale';
+import WhatWeBuild from '@/components/sections/WhatWeBuild';
 
 export default function HomePage() {
   const t = useTranslations('nav');
@@ -29,6 +30,7 @@ export default function HomePage() {
       />
       <main className="relative mx-auto flex flex-col">
         <Hero />
+        <WhatWeBuild />
         <PainCards />
         <Metodo />
         <Processo />
