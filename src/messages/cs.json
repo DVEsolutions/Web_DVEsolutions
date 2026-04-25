@@ -8,22 +8,22 @@
     "link_pricing": "Ceník"
   },
   "hero": {
-    "badge_mvs": "MVS dokončeno",
+    "badge_mvs": "MVP + AI řešení",
     "badge_weeks": "6 týdnů",
     "badge_price": "od €2 000",
-    "headline_1": "Přestaňte",
-    "headline_accent": "plánovat.",
-    "headline_2": "Začněte spouštět.",
-    "subheadline": "Vezmeme váš nápad od prázdné stránky k testovatelému prototypu za 2 týdny — a k živému produktu za 6. S AI, bez plýtvání, bez agentury, která nerozumí vašemu businessu.",
+    "headline_1": "Stavíme digitální",
+    "headline_accent": "na míru.",
+    "headline_2": "který rozvíjí váš business.",
+    "subheadline": "Ať začínáte od nuly nebo chcete automatizovat procesy pomocí AI — jsme end-to-end technický partner. MVP, AI agenti, automatizace. Bez agentur, bez prostředníků.",
     "cta_primary": "Zjistěte, jestli je DVEsolutions pro vás",
     "cta_secondary": "Podívejte se jak to funguje",
     "stat_1": "2 spuštěné produkty",
     "stat_2": "15+ let zkušeností",
     "stat_3": "6 týdnů ke spuštění",
     "stat_4": "2 zakladatelé",
-    "typewriter_1": "plánovat.",
-    "typewriter_2": "čekat.",
-    "typewriter_3": "ztrácet čas."
+    "typewriter_1": "na míru.",
+    "typewriter_2": "s AI.",
+    "typewriter_3": "end-to-end."
   },
   "pain": {
     "section_label": "Problém",

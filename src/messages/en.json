@@ -8,22 +8,22 @@
     "link_pricing": "Pricing"
   },
   "hero": {
-    "badge_mvs": "MVS completed",
+    "badge_mvs": "MVP + AI Solutions",
     "badge_weeks": "6 weeks",
     "badge_price": "from €2,000",
-    "headline_1": "Stop",
-    "headline_accent": "planning.",
-    "headline_2": "Start launching.",
-    "subheadline": "We take your idea from blank page to testable prototype in 2 weeks — and to a live product in 6. With AI, no waste, no agency that doesn't understand your business.",
+    "headline_1": "We build the digital",
+    "headline_accent": "made for you.",
+    "headline_2": "that grows your business.",
+    "subheadline": "Whether you're starting from zero or want to automate your processes with AI — we're the end-to-end technical partner. MVP, AI agents, automations. No agencies, no intermediaries.",
     "cta_primary": "See if DVEsolutions is right for you",
     "cta_secondary": "See how it works",
     "stat_1": "2 products launched",
     "stat_2": "15+ years combined",
     "stat_3": "6 weeks to launch",
     "stat_4": "2 founders",
-    "typewriter_1": "planning.",
-    "typewriter_2": "waiting.",
-    "typewriter_3": "wasting time."
+    "typewriter_1": "made for you.",
+    "typewriter_2": "powered by AI.",
+    "typewriter_3": "end-to-end."
   },
   "pain": {
     "section_label": "The Problem",
