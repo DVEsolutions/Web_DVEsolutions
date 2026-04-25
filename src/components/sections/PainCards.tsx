@@ -29,7 +29,15 @@ function TrendDownIcon() {
   );
 }
 
-const cardIcons = [ClockIcon, CodeIcon, TrendDownIcon];
+function ZapIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+    </svg>
+  );
+}
+
+const cardIcons = [ClockIcon, CodeIcon, TrendDownIcon, ZapIcon];
 
 export default function PainCards() {
   const t = useTranslations('pain');
@@ -38,6 +46,7 @@ export default function PainCards() {
     { badge: t('card1_badge'), hook: t('card1_hook'), body: t('card1_body') },
     { badge: t('card2_badge'), hook: t('card2_hook'), body: t('card2_body') },
     { badge: t('card3_badge'), hook: t('card3_hook'), body: t('card3_body') },
+    { badge: t('card4_badge'), hook: t('card4_hook'), body: t('card4_body') },
   ];
 
   return (
@@ -75,6 +84,7 @@ export default function PainCards() {
                     <Icon />
                   </div>
                   <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-orange-500 mb-1">{card.badge}</p>
                     <h3 className="text-base font-semibold text-gray-900 tracking-tight">
                       &quot;{card.hook}&quot;
                     </h3>

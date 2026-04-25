@@ -58,7 +58,10 @@
     "card2_body": "Už jste zaplatili, čekali, vysvětlovali od nuly. A stále jste na začátku.",
     "card3_badge": "Startup s investicí",
     "card3_hook": "2 měsíce s agenturou. Nulový startup kontext.",
-    "card3_body": "Burn rate nečeká. Každý týden bez produktu jsou spálené peníze."
+    "card3_body": "Burn rate nečeká. Každý týden bez produktu jsou spálené peníze.",
+    "card4_badge": "Firma",
+    "card4_hook": "Moje týmy ztrácejí hodiny na opakujících se manuálních procesech.",
+    "card4_body": "Schvalování, kopírování, manuální e-maily. AI to všechno může automatizovat — vy byste se měli věnovat strategii."
   },
   "method": {
     "section_label": "Sestavení",

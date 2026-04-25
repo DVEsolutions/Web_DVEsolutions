@@ -58,7 +58,10 @@
     "card2_body": "You've already paid, waited, explained from scratch. And you're still at square one.",
     "card3_badge": "Funded startup",
     "card3_hook": "2 months with an agency. Zero startup context.",
-    "card3_body": "Burn rate doesn't wait. Every week without a product is cash burned."
+    "card3_body": "Burn rate doesn't wait. Every week without a product is cash burned.",
+    "card4_badge": "Enterprise",
+    "card4_hook": "My team loses hours on repetitive manual processes.",
+    "card4_body": "Approvals, copy-paste, manual emails. AI can automate all of this — you should be focused on strategy."
   },
   "method": {
     "section_label": "The Assembly",

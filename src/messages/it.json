@@ -58,7 +58,10 @@
     "card2_body": "Hai già pagato, aspettato, spiegato da zero. E sei ancora al punto di partenza.",
     "card3_badge": "Startup con funding",
     "card3_hook": "2 mesi con un'agenzia. Zero contesto startup.",
-    "card3_body": "Il burn rate non aspetta. Ogni settimana senza prodotto è cash bruciato."
+    "card3_body": "Il burn rate non aspetta. Ogni settimana senza prodotto è cash bruciato.",
+    "card4_badge": "Azienda",
+    "card4_hook": "I miei team perdono ore in processi manuali ripetitivi.",
+    "card4_body": "Approvazioni, copy-paste, email manuali. L'AI può automatizzare tutto questo — tu dovresti pensare alla strategia."
   },
   "method": {
     "section_label": "L'Assemblaggio",
