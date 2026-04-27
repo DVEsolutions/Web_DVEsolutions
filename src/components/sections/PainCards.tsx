@@ -74,8 +74,8 @@ export default function PainCards() {
               return (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="flex items-start gap-4 rounded-xl bg-white p-5 ring-1 ring-black/5 shadow-sm transition-all hover:ring-orange-400/40 hover:shadow-md hover:shadow-orange-500/5"

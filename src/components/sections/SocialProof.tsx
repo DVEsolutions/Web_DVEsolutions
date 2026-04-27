@@ -54,8 +54,8 @@ export default function SocialProof() {
   const locale = useLocale();
 
   const team = [
-    { name: t('daniel_name'), role: t('daniel_role'), bio: t('daniel_bio'), linkedin: 'https://linkedin.com/in/danieldevecchi/', email: 'Daniel@dvesolutions.eu', video: '/videos/core-dan.mp4' },
-    { name: t('victor_name'), role: t('victor_role'), bio: t('victor_bio'), linkedin: 'https://linkedin.com/in/victor-espinoza-92770217/', email: 'Victor@dvesolutions.eu', video: '/videos/core-vic.mp4' },
+    { name: t('daniel_name'), role: t('daniel_role'), bio: t('daniel_bio'), linkedin: 'https://linkedin.com/in/danieldevecchi/', email: 'Daniel@dvesolutions.eu', video: '/videos/core-dan-480.mp4' },
+    { name: t('victor_name'), role: t('victor_role'), bio: t('victor_bio'), linkedin: 'https://linkedin.com/in/victor-espinoza-92770217/', email: 'Victor@dvesolutions.eu', video: '/videos/core-vic-480.mp4' },
   ];
 
   const d1 = [...techRow1, ...techRow1];
@@ -69,8 +69,8 @@ export default function SocialProof() {
 
         {/* The Core Team */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="relative z-[5]"
@@ -89,8 +89,8 @@ export default function SocialProof() {
           {team.map((m, i) => (
             <motion.div
               key={m.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex flex-col items-center text-center rounded-xl bg-white p-6 sm:p-10 ring-1 ring-black/5 shadow-sm transition-all hover:ring-orange-400/40 hover:shadow-lg"
@@ -98,7 +98,7 @@ export default function SocialProof() {
               <div className="relative shrink-0 rounded-full bg-gray-100 p-1 ring-1 ring-gray-200 mb-6">
                 <div className="w-24 h-24 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-orange-100 to-orange-50">
                   <div className="hidden sm:block w-full h-full">
-                    <CineVideo src={m.video} className="w-full h-full object-cover scale-[1.05]" loadMargin="500px" />
+                    <CineVideo src={m.video} className="w-full h-full object-cover scale-[1.05]" />
                   </div>
                   <span className="sm:hidden text-2xl font-bold text-orange-500">
                     {m.name.split(' ').map((n: string) => n[0]).join('')}
@@ -133,8 +133,8 @@ export default function SocialProof() {
         <Divider className="my-16" />
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="relative z-[5]"
@@ -146,8 +146,8 @@ export default function SocialProof() {
           {/* Agent Lead — full-width featured card */}
           <motion.a
             href={`/${locale}/agent-lead`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="block w-full rounded-xl bg-white p-6 ring-2 ring-orange-500 shadow-2xl shadow-orange-500/10 transition-all hover:shadow-orange-400/20 mb-6 group"
@@ -177,8 +177,8 @@ export default function SocialProof() {
             ].map((p, i) => (
               <motion.div
                 key={p.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="rounded-xl bg-white p-6 ring-1 ring-black/5 shadow-sm flex flex-col gap-3 transition-all hover:ring-orange-400/40 hover:shadow-md"

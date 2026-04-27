@@ -18,8 +18,8 @@ export default function WhatWeBuild() {
         <VerticalLines />
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mb-12"
@@ -39,8 +39,8 @@ export default function WhatWeBuild() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {/* Card 1 — MVP Build (standard style) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="rounded-xl bg-white p-8 md:p-10 ring-1 ring-black/5 shadow-sm flex flex-col transition-all hover:ring-orange-400/40 hover:shadow-md"
@@ -67,8 +67,8 @@ export default function WhatWeBuild() {
 
           {/* Card 2 — AI Solutions (highlighted style, same as FULL BUILD in Pricing) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative rounded-xl bg-white pt-12 p-8 md:p-10 md:pt-10 ring-2 ring-orange-500 shadow-2xl shadow-orange-500/10 flex flex-col mt-1"

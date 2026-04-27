@@ -389,5 +389,15 @@
     "snippet_wix": "Wix: Nastaveni → Vlastni kod",
     "snippet_other": "Ostatni: Vlozte pred </body>",
     "page_title": "Dashboard leadu"
+  },
+  "meta": {
+    "home": {
+      "title": "DVEsolutions — Tech Consulting & AI Agenti",
+      "description": "Technologické poradenství pro evropské firmy. Webové aplikace, AI agenti na míru a automatizace."
+    },
+    "agentLead": {
+      "title": "Agent Lead — AI Agent pro generování leadů | DVEsolutions",
+      "description": "AI agent, který kvalifikuje vaše leady autonomně 24/7. Včetně analytického dashboardu."
+    }
   }
 }

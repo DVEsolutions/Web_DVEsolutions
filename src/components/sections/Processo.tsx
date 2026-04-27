@@ -46,8 +46,8 @@ export default function Processo() {
         <div ref={ref} className="relative z-[5]">
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.45 }}
           >
@@ -62,8 +62,8 @@ export default function Processo() {
 
           {/* Mini Gantt bar */}
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-10 rounded-xl bg-white p-5 ring-1 ring-black/5 shadow-sm"

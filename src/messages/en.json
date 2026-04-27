@@ -389,5 +389,15 @@
     "snippet_wix": "Wix: Settings → Custom code",
     "snippet_other": "Other: Paste before </body>",
     "page_title": "Lead Dashboard"
+  },
+  "meta": {
+    "home": {
+      "title": "DVEsolutions — Tech Consulting & AI Agents",
+      "description": "Tech consulting for European businesses. Custom web apps, AI agents and automations that eliminate repetitive tasks."
+    },
+    "agentLead": {
+      "title": "Agent Lead — AI Lead Generation Agent | DVEsolutions",
+      "description": "AI agent that qualifies your leads autonomously 24/7. Analytics dashboard included."
+    }
   }
 }

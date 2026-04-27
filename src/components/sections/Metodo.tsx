@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import FeatureDivider from '@/components/effects/FeatureDivider';
 import VerticalLines from '@/components/effects/VerticalLines';
@@ -14,15 +13,6 @@ const vizComponents = [WorkshopViz, DesignViz, BuildViz];
 
 export default function Metodo() {
   const t = useTranslations('method');
-  const sectionRef = useRef<HTMLElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-
-  const bgY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
-
   const steps = [
     { num: "01", timeline: t('step1_timeline'), title: t('step1_title'), desc: t('step1_desc') },
     { num: "02", timeline: t('step2_timeline'), title: t('step2_title'), desc: t('step2_desc') },
@@ -32,21 +22,21 @@ export default function Metodo() {
   return (
     <>
       <FeatureDivider className="my-16 max-w-6xl" />
-      <section ref={sectionRef} id="method" className="relative mx-auto max-w-6xl scroll-my-24 px-4 xl:px-0 overflow-hidden">
+      <section id="method" className="relative mx-auto max-w-6xl scroll-my-24 px-4 xl:px-0 overflow-hidden">
         <VerticalLines />
 
-        {/* Parallax diagonal pattern background */}
-        <motion.div className="absolute inset-0 -z-10 pointer-events-none" style={{ y: bgY }}>
+        {/* Diagonal pattern background */}
+        <div className="absolute inset-0 -z-10 pointer-events-none">
           <DiagonalSVG
             id="metodo-diagonal"
             className="mask-[radial-gradient(ellipse_80%_60%_at_50%_50%,black_40%,transparent_100%)]"
           />
-        </motion.div>
+        </div>
 
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mb-20"
@@ -76,13 +66,15 @@ export default function Metodo() {
               >
                 {/* Text side */}
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className={isReversed ? 'md:order-2' : ''}
                 >
-                  <ParallaxNumber num={step.num} scrollYProgress={scrollYProgress} index={i} />
+                  <div className="text-[80px] md:text-[120px] font-bold tracking-tighter leading-none text-gray-200 select-none pointer-events-none mb-3 md:mb-4 -z-10 relative">
+                    {step.num}
+                  </div>
 
                   <span className="inline-flex items-center rounded-full border-b-[1.5px] border-orange-700 bg-gradient-to-b from-orange-400 to-orange-500 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
                     {step.timeline}
@@ -99,8 +91,8 @@ export default function Metodo() {
 
                 {/* Visual side */}
                 <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
                   className={isReversed ? 'md:order-1' : ''}
@@ -115,30 +107,5 @@ export default function Metodo() {
         </div>
       </section>
     </>
-  );
-}
-
-function ParallaxNumber({
-  num,
-  scrollYProgress,
-  index,
-}: {
-  num: string;
-  scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
-  index: number;
-}) {
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [20 + index * 10, -20 - index * 10],
-  );
-
-  return (
-    <motion.div
-      style={{ y }}
-      className="text-[80px] md:text-[120px] font-bold tracking-tighter leading-none text-gray-200 select-none pointer-events-none mb-3 md:mb-4 -z-10 relative"
-    >
-      {num}
-    </motion.div>
   );
 }

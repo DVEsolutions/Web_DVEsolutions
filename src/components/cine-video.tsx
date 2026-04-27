@@ -3,6 +3,42 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
+// Module-level scroll tracker — shared across all CineVideo instances to avoid N listeners
+let _scrollListeners: Set<() => void> = new Set();
+let _scrollIdleTimer: ReturnType<typeof setTimeout> | null = null;
+let _isScrollIdle = true;
+
+function _onWindowScroll() {
+  if (_isScrollIdle) {
+    _isScrollIdle = false;
+    _scrollListeners.forEach(fn => fn());
+  }
+  if (_scrollIdleTimer) clearTimeout(_scrollIdleTimer);
+  _scrollIdleTimer = setTimeout(() => {
+    _isScrollIdle = true;
+    _scrollListeners.forEach(fn => fn());
+  }, 200);
+}
+
+function useScrollIdle(): boolean {
+  const [idle, setIdle] = useState(true);
+  useEffect(() => {
+    const notify = () => setIdle(_isScrollIdle);
+    _scrollListeners.add(notify);
+    if (_scrollListeners.size === 1) {
+      window.addEventListener('scroll', _onWindowScroll, { passive: true });
+    }
+    return () => {
+      _scrollListeners.delete(notify);
+      if (_scrollListeners.size === 0) {
+        window.removeEventListener('scroll', _onWindowScroll);
+        if (_scrollIdleTimer) clearTimeout(_scrollIdleTimer);
+      }
+    };
+  }, []);
+  return idle;
+}
+
 interface CineVideoProps extends React.VideoHTMLAttributes<HTMLVideoElement> {
   src: string;
   className?: string;
@@ -18,7 +54,7 @@ export function CineVideo({
   className,
   poster,
   eager = false,
-  loadMargin = "300px",
+  loadMargin = "100px",
   ...props
 }: CineVideoProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -27,6 +63,7 @@ export function CineVideo({
   const [isVisible, setIsVisible] = useState(eager);
   // Se eager=true, consideriamo il player 'pronto' nativamente per evitare lag fade-in
   const [isReady, setIsReady] = useState(eager);
+  const isScrollIdle = useScrollIdle();
 
   // 1. LAZY SOURCE ASSIGNMENT
   //    Don't even set the <video src> until the container is near the viewport.
@@ -59,7 +96,7 @@ export function CineVideo({
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.05 }
+      { threshold: 0.4 }
     );
 
     // We observe the container div (which always has dimensions),
@@ -71,22 +108,21 @@ export function CineVideo({
     return () => observer.disconnect();
   }, [shouldLoad]);
 
-  // 3. PLAY/PAUSE control
+  // 3. PLAY/PAUSE control — only when scroll is idle; debounced to avoid decode during scroll-by
   useEffect(() => {
     const video = videoRef.current;
     if (!video || !shouldLoad) return;
 
-    if (isVisible) {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Autoplay blocked — will play on next user interaction
-        });
-      }
+    if (isVisible && isScrollIdle) {
+      const t = setTimeout(() => {
+        const p = video.play();
+        if (p !== undefined) p.catch(() => {});
+      }, 150);
+      return () => clearTimeout(t);
     } else {
       video.pause();
     }
-  }, [isVisible, shouldLoad]);
+  }, [isVisible, isScrollIdle, shouldLoad]);
 
   // 4. Handle video ready state
   const onVideoReady = useCallback(() => {
@@ -118,7 +154,7 @@ export function CineVideo({
           ref={videoRef}
           src={src}
           poster={poster}
-          preload="auto"
+          preload="none"
           className={cn(
             "w-full h-full object-cover transition-opacity duration-700 ease-out",
             isReady ? "opacity-100" : "opacity-0"

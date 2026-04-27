@@ -389,5 +389,15 @@
     "snippet_wix": "Wix: Impostazioni → Codice personalizzato",
     "snippet_other": "Altro: Incolla prima di </body>",
     "page_title": "Dashboard Lead"
+  },
+  "meta": {
+    "home": {
+      "title": "DVEsolutions — Tech Consulting & AI Agent",
+      "description": "Consulenza tech per aziende europee. Web app, AI agent su misura e automazioni che eliminano i task ripetitivi."
+    },
+    "agentLead": {
+      "title": "Agent Lead — AI Agent per Lead Generation | DVEsolutions",
+      "description": "AI agent che qualifica i tuoi lead in autonomia 24/7. Dashboard analytics inclusa."
+    }
   }
 }

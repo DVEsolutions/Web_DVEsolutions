@@ -1,5 +1,6 @@
+import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
@@ -9,6 +10,35 @@ async function loadMessages(locale: string) {
     case 'cs': return (await import('@/messages/cs.json')).default;
     default:   return (await import('@/messages/it.json')).default;
   }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  const base = 'https://dvesolution.fl1.it';
+  const path = locale === 'it' ? '' : `/${locale}`;
+
+  return {
+    title: t('home.title'),
+    description: t('home.description'),
+    openGraph: {
+      url: `${base}${path}`,
+      title: t('home.title'),
+      description: t('home.description'),
+    },
+    alternates: {
+      canonical: `${base}${path}`,
+      languages: {
+        it: base,
+        en: `${base}/en`,
+        cs: `${base}/cs`,
+      },
+    },
+  };
 }
 
 export default async function LocaleLayout({
